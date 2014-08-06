@@ -474,7 +474,7 @@ describe 'Mozilla/5.0 (Android; Mobile; rv:19.0) Gecko/19.0 Firefox/19.0' do
   end
 
   it "should return true for mobile?" do
-    expect(@useragent.mobile?).to be_truthy
+    expect(@useragent.mobile?).to be_true
   end
 end
 

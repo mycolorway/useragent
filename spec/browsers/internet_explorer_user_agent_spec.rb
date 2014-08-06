@@ -361,7 +361,7 @@ describe "Chrome Frame installs before version 4.0" do
   it_should_behave_like "Internet Explorer browser"
 
   it "should return true as chromeframe" do
-    expect(@useragent.chromeframe).to be_truthy
+    expect(@useragent.chromeframe).to be_true
   end
 
   it "shouldn't have a version" do
@@ -378,7 +378,7 @@ describe "Chrome Frame from version 4.0 on" do
     it_should_behave_like "Internet Explorer browser"
 
     it "should return true as chromeframe" do
-      expect(@useragent.chromeframe).to be_truthy
+      expect(@useragent.chromeframe).to be_true
     end
 
     it "should have a version" do
@@ -394,7 +394,7 @@ describe "Chrome Frame from version 4.0 on" do
     it_should_behave_like "Internet Explorer browser"
 
     it "should return true as chromeframe" do
-      expect(@useragent.chromeframe).to be_truthy
+      expect(@useragent.chromeframe).to be_true
     end
 
     it "should have a version" do
