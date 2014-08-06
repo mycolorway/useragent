@@ -87,6 +87,10 @@ class UserAgent
         end
       end
 
+      def wechat?
+        detect_product('MicroMessenger')
+      end
+
       private
         def detect_product(product)
           detect { |useragent| useragent.product.to_s.downcase == product.to_s.downcase }
