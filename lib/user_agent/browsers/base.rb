@@ -88,7 +88,7 @@ class UserAgent
       end
 
       def wechat?
-        detect_product('MicroMessenger')
+        detect_product('MicroMessenger') ? true : false
       end
 
       private

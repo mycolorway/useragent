@@ -37,3 +37,16 @@ describe "Mozilla/5.0 (Linux; U; Android 4.2.2; zh-cn; H30-T10 Build/HuaweiH30-T
   end
 
 end
+
+# no Wechat on Android
+describe "Mozilla/5.0 (Linux; U; Android 4.2.2; zh-cn; H30-T10 Build/HuaweiH30-T10) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30 " do
+
+  before {
+    @useragent = UserAgent.parse("Mozilla/5.0 (Linux; U; Android 4.2.2; zh-cn; H30-T10 Build/HuaweiH30-T10) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30")
+  }
+
+  it "should be wechat" do
+    expect(@useragent).to_not be_wechat
+  end
+
+end
